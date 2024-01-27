@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 import pickle
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, origins='*')
+#CORS(app, resources={r"/predict": {"origins": "http://localhost:3000"}})   Enable CORS for /predict route from localhost:3000
 
 # Load your machine learning model
 with open('models/cv.pkl', 'rb') as cv_file, open('models/clf.pkl', 'rb') as clf_file:
