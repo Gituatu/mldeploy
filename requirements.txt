@@ -3,3 +3,4 @@ numpy==1.23.3
 streamlit==1.30.0
 pickle-mixin==1.0.2
 scikit-learn==1.4.0
+Flask-CORS==4.0.0
